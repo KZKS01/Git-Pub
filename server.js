@@ -8,12 +8,14 @@ app.get('/', function(req, res){
 });
 
 app.get('/drinks', function(req, res){
-    res.render('index.ejs');
+    res.render('index.ejs', {drinks: drinks});
 });
 
 app.get('/drinks/:id', function(req, res){
-    res.send(req.params.id);
+    const drink = drinks[req.params.id];
+    res.render('show.ejs', {drink: drink});
 })
+
 app.listen(port, function(){
     console.log(`Express is listening on port ${port}`);
 });

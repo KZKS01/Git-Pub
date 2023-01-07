@@ -11,12 +11,13 @@
     <ul>
         <% for(let i = 0; i < drinks.length; i++) { %> 
         <li>
-            <a href="/drinks/<%= i %> %">
-            <%= drinks[i].name.toUpperCase() %> 
+            <a href="/drinks/<%= i %>">  
+                <%= drinks[i].name.toUpperCase() %> 
             </a>
         </li>
         <% } %> 
     </ul>
+
 </body>
     <style>
         body {
