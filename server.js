@@ -8,7 +8,8 @@ app.get('/', function(req, res){
 });
 
 app.get('/drinks', function(req, res){
-    res.send(drinks);
+    // const drink = drinks[req.params.index]
+    res.render('index.ejs');
 });
 
 app.listen(port, function(){
