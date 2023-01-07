@@ -1,3 +1,22 @@
-<h1>Detail for <%= drink.name %> </h1>
-<p>Price: <%= drink.price %></p>
-<p>Image: </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drinks Index Page</title>
+</head>
+<body>
+    <h1>At foo bar</h1>
+    <h2>Name: <%= drink.name.charAt(0).toUpperCase() + drink.name.slice(1) %></h2>
+    <img src="<%= drink.image%>" alt="image of the drink">
+    <h3>Price: <%= drink.price%></h3>
+    <a href="/drinks">back</a>
+</body>
+    <style>
+        body {
+            color: blanchedalmond;
+            background-color: steelblue;
+        }
+    </style>
+</html>
