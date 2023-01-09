@@ -7,11 +7,17 @@
     <title>Drinks Index Page</title>
 </head>
 <body>
-    <h1>At foo bar</h1>
-    <h2>Name: <%= drink.name.charAt(0).toUpperCase() + drink.name.slice(1) %></h2>
-    <img src="<%= drink.image%>" alt="image of the drink">
-    <h3>Price: <%= drink.price%></h3>
-    <a href="/drinks">back</a>
+    <h1>Welcome to gitPub - Drink Menu</h1>
+    <ul>
+        <% for(let i = 0; i < drinks.length; i++) { %> 
+        <li>
+            <a href="/drinks/<%= i %>">  
+                <%= drinks[i].name.charAt(0).toUpperCase() + drinks[i].name.slice(1)%> 
+            </a>
+        </li>
+        <% } %> 
+    </ul>
+
 </body>
     <style>
         body {
